@@ -21,7 +21,7 @@ const features = [
     title: "Noecontact",
     description:
       "A simple CRUD (Search, Pagination) contact form with server action. Server action,Prisma ORM, useFormState, zod.",
-    link: "/",
+    link: "/neocontact",
   },
   {
     icon: Film,

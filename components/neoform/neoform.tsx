@@ -15,7 +15,7 @@ import {
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import type { ActionResponse } from "@/types/address";
 import { CheckCircle2 } from "lucide-react";
-import ButtonSubmit from "./button-submit";
+import ButtonSubmit from "../submit";
 
 const initialState: ActionResponse = {
   success: false,
