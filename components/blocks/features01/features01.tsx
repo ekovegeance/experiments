@@ -53,7 +53,7 @@ const Features01Page = () => {
         <h2 className="text-5xl md:text-6xl font-black tracking-tight text-center">
           Unleash Your Creativity
         </h2>
-        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-screen-lg mx-auto px-6">
+        <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-(--breakpoint-lg) mx-auto px-6">
           {features.map((feature, index) => (
             <Link
               href={feature.link}

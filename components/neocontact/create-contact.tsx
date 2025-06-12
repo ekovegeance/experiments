@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useActionState } from "react";
 import {
   Card,
   CardContent,
@@ -10,14 +10,13 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { createContact } from "@/actions/contact";
-import { useFormState } from "react-dom";
 import ButtonSubmit from "../submit";
 import { Button } from "../ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 export default function CrateContactForm() {
-  const [state, formAction] = useFormState(createContact, null);
+  const [state, formAction] = useActionState(createContact, null);
 
   return (
     <Card>
