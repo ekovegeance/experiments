@@ -10,7 +10,7 @@ const Hero06 = () => {
       <BackgroundPattern />
 
       <div className="relative z-10 text-center max-w-2xl">
-        {/* <Badge className="bg-gradient-to-br via-70% from-primary via-muted/30 to-primary rounded-full py-1 border-none">
+        {/* <Badge className="bg-linear-to-br via-70% from-primary via-muted/30 to-primary rounded-full py-1 border-none">
           Just released v1.0.0
         </Badge> */}
         <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-black leading-[1.1] tracking-tight">
@@ -23,14 +23,14 @@ const Hero06 = () => {
         </p> */}
         <div className="mt-12 flex items-center justify-center gap-4">
           <Button size="lg" className="rounded-full text-base">
-            Get Started <ArrowUpRight className="!h-5 !w-5" />
+            Get Started <ArrowUpRight className="h-5! w-5!" />
           </Button>
           {/* <Button
             variant="outline"
             size="lg"
             className="rounded-full text-base shadow-none"
           >
-            <CirclePlay className="!h-5 !w-5" /> Watch Demo
+            <CirclePlay className="h-5! w-5!" /> Watch Demo
           </Button> */}
         </div>
       </div>
