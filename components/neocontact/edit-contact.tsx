@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useActionState } from "react";
 import {
   Card,
   CardContent,
@@ -10,7 +10,6 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { updateContact } from "@/actions/contact";
-import { useFormState } from "react-dom";
 import ButtonSubmit from "../submit";
 import { Button } from "../ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -19,7 +18,7 @@ import { Contact } from "@prisma/client";
 
 export default function EditContactForm({ contact }: { contact: Contact }) {
   const updateContactWithId = updateContact.bind(null, contact.id);
-  const [state, formAction] = useFormState(updateContactWithId, null);
+  const [state, formAction] = useActionState(updateContactWithId, null);
 
   return (
     <Card>

@@ -3,11 +3,12 @@ import EditContactForm from "@/components/neocontact/edit-contact";
 import { notFound } from "next/navigation";
 import React from "react";
 
-export default async function UpdateContactPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default async function UpdateContactPage(
+  props: {
+    params: Promise<{ id: string }>;
+  }
+) {
+  const params = await props.params;
   const id = params.id;
   const contact = await getContactById(id);
 
@@ -19,7 +20,6 @@ export default async function UpdateContactPage({
     <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm">
         <EditContactForm contact={contact} />
-        p
       </div>
     </div>
   );

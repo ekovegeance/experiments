@@ -1,6 +1,6 @@
 "use client";
+import { useActionState } from "react";
 
-import { useFormState } from "react-dom";
 import { submitAddress } from "@/actions/address";
 // import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,7 +23,7 @@ const initialState: ActionResponse = {
 };
 
 export default function Neoform() {
-  const [state, formAction] = useFormState(submitAddress, initialState);
+  const [state, formAction] = useActionState(submitAddress, initialState);
 
   return (
     <Card className="w-full max-w-lg mx-auto">

@@ -24,6 +24,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
+import type { JSX } from "react";
+
 interface MenuItem {
   title: string;
   url: string;
