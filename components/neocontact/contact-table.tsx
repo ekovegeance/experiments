@@ -32,7 +32,7 @@ export default function ContactTable() {
       setContacts(contacts as Contact[]);
       setTotalPages(totalPages);
     };
-    fetchContacts();
+     fetchContacts();
   }, [page]);
 
   const handleDeleteContact = async (id: string) => {
