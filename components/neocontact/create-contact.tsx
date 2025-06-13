@@ -56,7 +56,7 @@ export default function CrateContactForm() {
           </div>
           <div className=" flex flex-row gap-4">
             <Link href="/neocontact">
-              <Button variant="secondary" className="w-full">
+              <Button variant="secondary">
                 <ArrowLeft /> back
               </Button>
             </Link>

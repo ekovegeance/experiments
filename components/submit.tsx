@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export default function ButtonSubmit() {
  const {pending} = useFormStatus();
   return (
-    <Button type="submit" className="w-full" disabled={pending}>
+    <Button type="submit"  disabled={pending}>
       {pending ? "Sabmiting..." : "Submit"}
     </Button>
   );

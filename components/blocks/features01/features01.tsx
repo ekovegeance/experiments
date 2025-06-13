@@ -1,48 +1,39 @@
-import { Contact, ChartPie, Film, MessageCircle, File } from "lucide-react";
+import { Contact, Film, File } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import {Badge} from "@/components/ui/badge";
 
 const features = [
   {
     icon: Film,
     title: "Noemovie",
     description: "A simple movie search app. Fetch data API, zustand.",
+    libraries: ["Zustand"],
     link: "/neomovie",
   },
   {
     icon: File,
     title: "Noeform",
     description:
-      "A simple form with validation. Server action, useFormState, zod.",
+      "A simple form with validation. Server action, useActionState.",
+    libraries: ["Zod"],
     link: "/neoform",
   },
   {
     icon: Contact,
     title: "Noecontact",
     description:
-      "A simple CRUD (Search, Pagination) contact form with server action. Server action,Prisma ORM, useFormState, zod.",
+      "A simple CRUD (Search, Pagination) contact form with server action. Server action, useActionState.",
+    libraries: ["Prisma ORM", "Zod"],
     link: "/neocontact",
   },
   {
-    icon: Film,
-    title: "Media Integrations",
+    icon: File,
+    title: "File Upload",
     description:
-      "Connect with Spotify, Instagram, or your own media library for dynamic visuals and sound.",
-    link: "/",
-  },
-  {
-    icon: ChartPie,
-    title: "Advanced Analytics",
-    description:
-      "Track engagement, clicks, and user activity with intuitive charts and reports.",
-    link: "/",
-  },
-  {
-    icon: MessageCircle,
-    title: "Seamless Collaboration",
-    description:
-      "Comment, tag, and assign tasks directly within your documents.",
-    link: "/",
+        "File upload Client side with API route. Upload file to Vercel Blob.",
+    libraries: ["Vercel Blob"],
+    link: "/fileupload",
   },
 ];
 
@@ -69,6 +60,13 @@ const Features01Page = () => {
               <p className="mt-1 text-foreground/80 text-[15px]">
                 {feature.description}
               </p>
+                <div className="mt-2 flex flex-wrap gap-2">
+                    {feature.libraries.map((lib, libIndex) => (
+                    <Badge key={libIndex}>
+                        {lib}
+                    </Badge>
+                    ))}
+                </div>
             </Link>
           ))}
         </div>
